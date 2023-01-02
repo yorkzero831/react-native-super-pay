@@ -21,6 +21,7 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'ios/AlipaySDK.xcframework', 'ios/WechatSDK.xcframework'
   s.frameworks = 'Security', 'SystemConfiguration', 'CoreTelephony', 'UIKit', 'Foundation', 'CFNetwork', 'QuartzCore', 'CoreGraphics', 'CoreMotion', 'CoreText', 'WebKit'
   s.libraries = 'c++', 'z', 'sqlite3.0'
+  s.resource = 'ios/AlipaySDK.bundle'
   
 
   # Don't install the dependencies when we run `pod install` in the old architecture.

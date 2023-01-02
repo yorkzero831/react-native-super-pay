@@ -1,7 +1,7 @@
 # react-native-super-pay
 
-Alipay Wechatpay intergration of react native
-基于react-native-puti-pay改造，由于原库太久没更新，微信、支付宝的SDK都是很旧的版本，因此更新了最新的SDK，并且对友盟SDK进行了兼容。
+Alipay Wechatpay intergration of react native which support M1 ARM64 Simulator, All SDKs are been rebuild in xcframework.
+<br>基于react-native-puti-pay改造，由于原库太久没更新，微信、支付宝的SDK都是很旧的版本，因此更新了最新的SDK，并且对M1虚拟机架构进行了兼容。
 <br/>基于RN 0.70.6 构建，使用的Alipay 和 Wechat SDK 都是最新的
 <br/>为了解决ARM64 Simulator 编译问题使用了二次加工过后的xcframework
 <br/>https://github.com/yorkzero831/WechatSDK-in-xcframework
