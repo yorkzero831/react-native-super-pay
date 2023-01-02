@@ -5,6 +5,7 @@ platform :ios, '12.4'
 install! 'cocoapods', :deterministic_uuids => false
 
 target 'SuperPayExample' do
+  inhibit_all_warnings!
   config = use_native_modules!
 
   # Flags change depending on the env values.

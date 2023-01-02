@@ -5,8 +5,8 @@
 @interface SuperPay : NSObject <NativeSuperPaySpec>
 #else
 #import <React/RCTBridgeModule.h>
-
-@interface SuperPay : NSObject <RCTBridgeModule>
+#import "WXApi.h"
+@interface SuperPay : NSObject <RCTBridgeModule,WXApiDelegate>
 #endif
 
 @end

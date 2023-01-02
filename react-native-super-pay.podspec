@@ -18,6 +18,11 @@ Pod::Spec.new do |s|
 
   s.dependency "React-Core"
 
+  s.vendored_frameworks = 'ios/AlipaySDK.xcframework', 'ios/WechatSDK.xcframework'
+  s.frameworks = 'Security', 'SystemConfiguration', 'CoreTelephony', 'UIKit', 'Foundation', 'CFNetwork', 'QuartzCore', 'CoreGraphics', 'CoreMotion', 'CoreText', 'WebKit'
+  s.libraries = 'c++', 'z', 'sqlite3.0'
+  
+
   # Don't install the dependencies when we run `pod install` in the old architecture.
   if ENV['RCT_NEW_ARCH_ENABLED'] == '1' then
     s.compiler_flags = folly_compiler_flags + " -DRCT_NEW_ARCH_ENABLED=1"

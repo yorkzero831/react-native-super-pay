@@ -53,6 +53,10 @@ android {
 }
 
 repositories {
+  maven {
+    // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+    url("$rootDir/../node_modules/react-native/android")
+  }
   mavenCentral()
   google()
 }
@@ -62,13 +66,15 @@ dependencies {
   // For < 0.71, this will be from the local maven repo
   // For > 0.71, this will be replaced by `com.facebook.react:react-android:$version` by react gradle plugin
   //noinspection GradleDynamicVersion
-  implementation "com.facebook.react:react-native"
+  implementation "com.facebook.react:react-native:+"
+  api 'com.tencent.mm.opensdk:wechat-sdk-android:6.8.20'
+  api 'com.alipay.sdk:alipaysdk-android:15.8.11@aar'
 }
 
 if (isNewArchitectureEnabled()) {
   react {
     jsRootDir = file("../src/")
     libraryName = "SuperPay"
-    codegenJavaPackageName = "com.superpay"
+    codegenJavaPackageName = "com.yorkzero831.superpay"
   }
 }
